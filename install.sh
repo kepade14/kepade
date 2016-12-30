@@ -68,7 +68,7 @@ apt-get -f install -y
 
 echo '接下来需要手动啦,dpkg 安装谷歌浏览器，然后在图标文件夹下修改--no-sandbox --user-data-dir  在dpkg 安装wps和它的依赖，cp host和xx-net到/下载 然后解压，还有gnome和相应脚本赋予权限并运行 ,到优化工具里改，shell主题也是 缩放是0.88。'
 echo ' cp goldeneye.py 到/ root下，还有配置xx-net(kepade-149711和ringed-hallway-149711) ,设置代理为相应的链接 kepade12@gmail.com'
-echo '配置github(2363746527@qq.com  ftp的用户和读写权限 '
+echo '配置github(kepade12@gmail.com)  ftp的用户和读写权限 '
 echo ' ssh的配置可以参见sshd_config '
 
 
