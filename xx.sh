@@ -1,6 +1,6 @@
 #!/bin/bash
 ###GFW
-echo ' this script is to pass the GTW '
+echo ' this script is to pass the GFW '
 set -x
 cd 下载
 cd hosts-master
