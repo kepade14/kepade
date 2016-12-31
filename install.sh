@@ -51,7 +51,7 @@ apt-get -y install alsa-base       //fix sound problem
 cp -rf pulseaudio /etc/default/
 systemct1 --user enable pulseaudio
 
-apt-get -y  install zhcon cmus elinks nginx vsftpd torchat htop smplayer virtualbox etherape lolcat ninvaders moon-buggy bastet greed weechat brasero uget vail-evasion bettercap 
+apt-get -y  install zhcon cmus elinks neofetch owasp-mantra-ff w3m-img nginx vsftpd torchat htop smplayer virtualbox etherape lolcat ninvaders moon-buggy bastet greed weechat brasero uget vail-evasion bettercap 
 apt-get -y install ttf-wqy-microhei ttf-wqy-zenhei xfonts-wqy
 clear
 
