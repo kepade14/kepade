@@ -1,13 +1,13 @@
 #!/bin/bash                  
 
-###time is 2016.12.26 first design #12.27#12.29
+###time is 2016.12.26 first design #12.27#12.29#2017.1.3
 #this script is for my own system, for apt and dpkg
-#this script must running under internet and root
-#if can't connet to internet ,must change sources and install wine
-###############################################
+#this script must running under internet
+#------------------------------------------------
 #for kepade
-###############################################
-#running at gnome-terminal or in tty3 as root##
+#---------------------------------------------
+#running at gnome-terminal or in tty3 as root
+
 ###############################################
 su
 
@@ -60,7 +60,7 @@ chmod 755 xx.sh cn.sh clean.sh up.sh start.sh stop.sh
 cd gnome
 chmod 755 gnomeinstall.sh
 ./gnomeinstall.sh
-echo 'use "dash to dock" to change icon local'
+echo 'setting'
 
 dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb  google-chrome-stable_current_amd64.deb wps-office_10.1.0.5672-a21_amd64.deb google-talkplugin_current_amd64.deb
 apt-get -f install -y
