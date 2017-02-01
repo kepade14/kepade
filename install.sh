@@ -1,11 +1,10 @@
 #!/bin/sh                  
 
-###time is 2016.12.26 first design #12.27#12.29#2017.1.9
-#this script is for my own system, for apt and dpkg
+###time is 2016.12.26 first design #12.27#12.29#2017.1.9#1.29#this script is for my own system, for apt and dpkg
 #this script must running under internet and root
 #if can't connet to internet ,must change sources and install wine
 -----------------------------------------------
-#for kepade
+#for gmx-x
 -----------------------------------------------
 ###############################################
 #running at gnome-terminal or in tty3 as root##
@@ -18,24 +17,9 @@ rm -rf sources.list
 cd
 cp -rf sources.list /etc/apt/      //change rolling sources
 cd
-echo '#源
+echo '#源>sources.list'
 
-#deb cdrom:[Debian GNU/Linux 2016.1 _Kali-rolling_ - Official Snapshot amd64 LIVE/INSTALL Binary 20160830-11:29]/ kali-rolling contrib main non-free
-#deb cdrom:[Debian GNU/Linux 2016.1 _Kali-rolling_ - Official Snapshot amd64 LIVE/INSTALL Binary 20160830-11:29]/ kali-rolling contrib main non-free
-deb http://mirrors.neusoft.edu.cn/kali kali-rolling main contrib non-free
 
-deb http://http.kali.org/kali kali-rolling main non-free contrib
-#阿里云kali源
-deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib
-deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib
-deb http://mirrors.aliyun.com/kali-security kali-rolling/updates main contrib non-free
-deb-src http://mirrors.aliyun.com/kali-security kali-rolling/updates main contrib non-free
-
-#中科大kali源
-deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
-deb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
-#deb http://mirrors.ustc.edu.cn/kali-security kali-current/updates main contrib non-free
-#deb-src http://mirrors.ustc.edu.cn/kali-security kali-current/updates main contrib non-free'
 apt-get update  
 clear
 apt-get -y install wine wine32 
@@ -48,20 +32,22 @@ apt autoremove -y
 clear
 apt-get -y install fcitx fcitx-googlepinyin
 
+apt-get -y install alsa-base       //fix sound problem 
+cp -rf pulseaudio /etc/default/
+systemct1 --user enable pulseaudio
+
+apt-get -y  install zhcon cmus putty elinks neofetch owasp-mantra-ff w3m-img nginx vsftpd torchat htop smplayer virtualbox etherape lolcat ninvaders moon-buggy bastet greed weechat brasero uget vail-evasion bettercap  
+#######this step is to install some software and also will take some time
+apt-get -y install ttf-wqy-microhei ttf-wqy-zenhei xfonts-wqy
+clear
+
 cd /var/www/
 ls 
 rm -rf html
 cd
 cp -rf html /var/www/
-
-apt-get -y install alsa-base       //fix sound problem 
-cp -rf pulseaudio /etc/default/
-systemct1 --user enable pulseaudio
-
-apt-get -y  install zhcon cmus elinks neofetch owasp-mantra-ff w3m-img nginx vsftpd torchat htop smplayer virtualbox etherape lolcat ninvaders moon-buggy bastet greed weechat brasero uget vail-evasion bettercap  
-#######this step is to install some software and also will take some time
-apt-get -y install ttf-wqy-microhei ttf-wqy-zenhei xfonts-wqy
-clear
+service apache2 start
+service apache2 status
 
 chmod 755 xx.sh cn.sh clean.sh up.sh start.sh stop.sh
 
@@ -71,6 +57,8 @@ chmod 755 gnomeinstall.sh
 echo 'use "dash to dock" to change icon local'
 
 dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb  google-chrome-stable_current_amd64.deb wps-office_10.1.0.5672-a21_amd64.deb google-talkplugin_current_amd64.deb
+
+./up.sh
 apt-get -f install -y
 
 
@@ -78,6 +66,6 @@ echo '接下来需要手动啦,dpkg 安装谷歌浏览器，然后在图标文�
 echo ' cp goldeneye.py 到/ root下，还有配置xx-net(kepade-149711和ringed-hallway-149711) ,设置代理为相应的链接 kepade12@gmail.com'
 echo '配置github(kepade12@gmail.com)  ftp的用户和读写权限 '
 echo ' ssh的配置可以参见sshd_config '
-
+echo '创建用户kepade gmx-x'
 
 #end
