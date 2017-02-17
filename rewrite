@@ -39,7 +39,7 @@ apt-get -y install alsa-base       //fix sound problem
 cp -rf pulseaudio /etc/default/
 systemct1 --user enable pulseaudio
 
-apt-get -y  install zhcon cmus putty elinks when gmip xinit neofetch owasp-mantra-ff w3m-img nginx vsftpd torbrowser-launcher torchat htop smplayer virtualbox etherape lolcat ninvaders moon-buggy bastet greed weechat brasero uget vail-evasion bettercap  
+apt-get -y  install zhcon cmus putty elinks when gmip parsero xinit neofetch owasp-mantra-ff w3m-img nginx vsftpd torbrowser-launcher torchat htop smplayer virtualbox etherape lolcat ninvaders moon-buggy bastet greed weechat brasero uget vail-evasion bettercap  
 #######this step is to install some software and also will take some time
 apt-get -y install ttf-wqy-microhei ttf-wqy-zenhei xfonts-wqy
 clear
@@ -52,7 +52,7 @@ cp -rf html/ /var/www/
 service apache2 start
 service apache2 status
 
-chmod 755 xx cn clean up start stop
+chmod 755 xx cn up start stop
 
 cd gnome
 chmod 755 gnomeinstall.sh

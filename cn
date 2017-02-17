@@ -1,0 +1,7 @@
+#!/bin/sh
+#######this script is to connect to net
+killall wineserver64
+killall DrClient.exe
+cd 桌面
+ls
+wine Client.exe

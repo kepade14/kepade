@@ -1,0 +1,12 @@
+#!/bin/bash
+echo 'kepade service '
+set -x 
+service tor start
+service vsftpd start
+service apache2 start
+service ssh start
+service postgresql start
+cd /mnt
+mono nat123linux.sh service &
+
+#end
