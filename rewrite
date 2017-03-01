@@ -39,7 +39,7 @@ apt-get -y install alsa-base       //fix sound problem
 cp -rf pulseaudio /etc/default/
 systemct1 --user enable pulseaudio
 
-apt-get -y  install zhcon cmus putty elinks when gmip parsero xinit neofetch owasp-mantra-ff w3m-img nginx vsftpd torbrowser-launcher torchat htop smplayer virtualbox etherape lolcat ninvaders moon-buggy bastet greed weechat brasero uget vail-evasion bettercap  
+apt-get -y  install zhcon cmus putty elinks when gmip parsero xinit neofetch owasp-mantra-ff w3m-img nginx vsftpd torbrowser-launcher torchat htop smplayer virtualbox etherape lolcat ninvaders moon-buggy bastet greed weechat brasero uget vail-evasion bettercap libreoffice libreoffice-l10n-zh-cn
 #######this step is to install some software and also will take some time
 apt-get -y install ttf-wqy-microhei ttf-wqy-zenhei xfonts-wqy
 clear
@@ -59,7 +59,7 @@ chmod 755 gnomeinstall.sh
 ./gnomeinstall.sh
 echo 'use "dash to dock" to change icon local'
 
-dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb  google-chrome-stable_current_amd64.deb wps-office_10.1.0.5672-a21_amd64.deb google-talkplugin_current_amd64.deb
+dpkg -i  google-chrome-stable_current_amd64.deb google-talkplugin_current_amd64.deb
 
 ./up
 apt-get -f install -y
