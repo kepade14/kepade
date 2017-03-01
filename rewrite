@@ -1,8 +1,7 @@
 #!/bin/sh                  
 
 ###time is 2016.12.26 first design #12.27#12.29#2017.1.9#2.4#this script is for my own system, for apt and dpkg
-#this script must running under internet and root
-#if can't connet to internet ,must change sources and install wine
+###this script work on kali GNU/Linux rolling kali2-amd64-4.9.0
 -----------------------------------------------
 #for kepade#gmx-x
 -----------------------------------------------
