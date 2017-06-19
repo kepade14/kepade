@@ -1,6 +1,9 @@
-#! /bin/bash
-sudo apt-get update
-sudo apt-get dist-upgrade
+#! /bin/sh
+if [ $(id -u) != "0" ]; then
+    echo "Error: You must be root to run this script, please use root "
+    exit 1
+fi
+apt-get update&& apt-get dist-upgrade
 ifconfig
 read -p "input your IP : " IP
 read -p "install shadowsocks ? (n or enter " TMP
@@ -38,22 +41,6 @@ echo "honey,your SSR has been created.you want to stop or restart it run '--pyth
 fi
 read -p "enter to continue "
 
+apt-get install nginx&& service nginx start
 
 
-read -p "use the aria2 webui ? (n or enter " TMP
-if [ $TMP=="" ]
-then apt install git aria2
-git clone https://github.com/ziahamza/webui-aria2.git
-cp -rf webui-aria2/* /var/www/html/
-read -p "input user name : " USER
-read -p "input passwd : " PASSWD
-aria2c --enable-rpc --rpc-listen-all --rpc-user=$USER --rpc-passwd=$PASSWD -D
-fi
-read -p "enter to continue "
-
-read -p "install ftp ? (n or enter" TMP
-if [ $TMP=="" ]
-then apt install vsftpd
-service vsftpd start
-fi
-echo "Done ! thanks fo using !"
