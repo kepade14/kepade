@@ -62,8 +62,8 @@ nano /etc/fstab﻿ #/swap/swap none swap defaults 0 0
 
 pacman -Syyu
 
-echo ' 配置xx-net(kepade-149711|ringed-hallway-149711|poetic-bison-168205|rapid-pottery-168205) ,设置代理为[http://127.0.0.1:8086/proxy.pac] kepade12@gmail.com'
-echo '配置github(kepade12@gmail.com)  ftp&&ssh 的用户和读写权限 '
+echo ' 配置xx-net(appid:xxxxx) ,设置代理为[http://127.0.0.1:8086/proxy.pac] kepade12@gmail.com'
+echo '配置github(xxxxxx@gmail.com)  ftp&&ssh 的用户和读写权限 '
 
 
 
