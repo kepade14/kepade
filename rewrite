@@ -1,0 +1,70 @@
+#!/bin/sh                  
+
+###for my manjaro-linux
+#this script must running under internet and root
+#if can't connet to internet ,must change sources and install wine
+-----------------------------------------------
+#for kepade#gmx-x
+-----------------------------------------------
+###############################################
+#running at gnome-terminal or in tty3 as root##
+###############################################
+if [ $(id -u) != "0" ]; then
+    echo "Error: You must be root to run this script, please use root "
+    exit 1
+fi
+
+
+cd
+cp -rf pacman.conf /etc/pacman.conf
+cp -rf mirrorlist /etc/pacman.d/mirrorlist
+pacman -Syy
+pacman -S archlinuxcn-keyring
+pacman -S blackarch-keyring
+pacman -S wine
+pacman -Syyu
+pacman -Scc
+yaourt -Syyu
+clear
+
+pacman -S fcitx-googlepinyin fcitx-im fcitx-configtool
+cp -rf .xprofile /home/gmx-x/.xprofile
+
+
+pacman -Rs liboffice-still lollpop avihi adobe-flash
+pacman -S   cmus hostapd  wps elinks when  nginx  etherape lolcat aria2 git vim httrack nmap hping google-chrome netease-cloud-music virtualbox tor openssh vsftpd neofetch screenfetch smplayer tmux create_ap grub-customizer mysql php php-apache phpmyadmin php-mcrypt
+#######this step is to install some software and also will take some time
+echo 'https://forum.manjaro.org/t/install-apache-mariadb-php-lamp-2016/1243/8'
+cd /srv
+ls 
+rm -rf http
+cd
+cp -rf http/ /srv/ 
+
+cp -rf sshd_config /etc/ssh/sshd_config
+cp -rf vsftpd.conf /etc/vsftpd.conf
+cd
+
+chmod +x xx cn 
+
+cd gnome
+chmod +x gnomeinstall.sh
+./gnomeinstall.sh
+echo 'use "dash to dock" to change icon local'
+
+sudo -i
+cd \
+mkdir swap
+cd swap
+dd if=/dev/zero of=swap bs=1024 count="4000000"
+mkswap -f  swap﻿
+nano /etc/fstab﻿ #/swap/swap none swap defaults 0 0
+
+pacman -Syyu
+
+echo ' 配置xx-net(kepade-149711|ringed-hallway-149711|poetic-bison-168205|rapid-pottery-168205) ,设置代理为[http://127.0.0.1:8086/proxy.pac] kepade12@gmail.com'
+echo '配置github(kepade12@gmail.com)  ftp&&ssh 的用户和读写权限 '
+
+
+
+#end
