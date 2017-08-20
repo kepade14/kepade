@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -x
+systemctl stop vsftpd.service
+systemctl stop httpd.service
+systemctl stop sshd.service
+systemctl stop mysqld.service
+set +x
+echo '20 21 80 3306 closed!!'

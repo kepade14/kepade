@@ -1,0 +1,12 @@
+#!/bin/sh
+#######this script is to connect to net
+killall wineserver
+killall winedevice.exe
+killall DrMain.exe
+killall DrClient.exe
+cd 桌面
+ls
+wine Client.exe
+
+sleep 30
+sudo create_ap wlp2s0 lo gmx-x qq23******72- 

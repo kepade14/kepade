@@ -1,0 +1,120 @@
+#!/bin/sh                  
+
+###for my Arch-linux
+#this script must running under internet and root
+-----------------------------------------------
+#for kepade#gmx-x
+-----------------------------------------------
+
+if [ $(id -u) != "0" ]; then
+    echo "Error: You must be root to run this script, please use root "
+    exit 1
+fi
+###START
+
+loadkeys layout
+ping -c 4 baidu.com
+timedatectl set-ntp true
+fdisk -l
+cfdisk ##delete sda6 and rewrite 
+mkfs.ext4 /dev/sda6
+mount /dev/sda6 /mnt
+mkdir /mnt/boot
+nano /etc/pacman.d/mirrorlist ##ctrl+K
+pacman -Syy
+pacman -S archlinux-keyring
+pacstrap -i /mnt base base-devel
+genfstab -U /mnt >> /mnt/etc/fstab
+arch-chroot /mnt
+
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+hwclock --systohc --utc
+nano /etc/locale.gen
+locale-gen
+echo LANG=en_US.UTF-8 >/etc/locale.conf
+echo kepade16 >/etc/hostname
+passwd
+systemctl enable dhcpcd.service
+pacman -S 'xorg' 'gnome' xorg-xinit 
+systemctl enable gdm
+systemctl enable NetworkManager.service
+useradd -m -g users -G wheel -s /bin/bash gmx-x
+passwd gmx-x
+chmod u+w /etc/sudoers
+echo gmx-x ALL=(ALL)ALL >>/etc/sudoers
+
+pacman -S iw wpa_supplicant dialog grub os-prober efibootmgr
+
+grub-install --recheck /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+
+pacman -S wqy-zenhei dnscrypt-proxy ntp  alsa-utils lib32-mesa-vdpau mesa-vdpau xf86-video-ati mesa xf86-video-intel net-tools htop openssl gst-libav libva-intel-driver vsftpd openssh
+reboot
+
+
+################################################################################################
+
+echo '[multilib]
+Include = /etc/pacman.d/mirrorlist
+
+[archlinuxcn]
+SigLevel = Optional TrustedOnly
+Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
+
+[blackarch]
+SigLevel = Optional TrustAll
+Server = https://mirrors.ustc.edu.cn/blackarch/$repo/os/$arch
+' >>/etc/pacman.conf
+pacman -Syy
+pacman -S archlinuxcn-keyring
+pacman -S blackarch-keyring
+pacman -S  wget yaourt pacaur wps-office brasero cmus  when etherape lolcat aria2 git vim nmap hping google-chrome  virtualbox tor neofetch screenfetch  tmux firefox firefox-i18n-zh-cn macchanger vlc gnome-tweak-tool  gedit python-pyopenssl python2-pyopenssl libffi pygtk python2-notify nss  
+
+pacman -S fcitx-googlepinyin fcitx-im fcitx-configtool
+cp -rf environment /etc
+cp -rf group /etc
+cp -rf group- /etc
+grub-mkconfig -o /boot/grub/grub.cfg
+
+##can choice
+pacman -S mysql php php-apache phpmyadmin php-mcrypt netease-cloud-music visual-studio-code shadowsocks-qt5
+  
+grub-mkconfig -o /boot/grub/grub.cfg
+
+#######this step is to install some software and also will take some time
+echo 'https://forum.manjaro.org/t/install-apache-mariadb-php-lamp-2016/1243/8'
+cd /srv
+ls 
+cd
+cp -rf http/ /srv/ 
+
+cp -rf sshd_config /etc/ssh/sshd_config
+cp -rf vsftpd.conf /etc/vsftpd.conf
+cd
+
+##start this without root but sudo
+cp -rf bashrc xx cn xinitrc xprofile /home/gmx-x/
+chmod +x xx cn 
+mv cn .cn&& mv xx .xx && mv bashrc .bashrc &&mv xinitrc .xinitrc && mv xprofile .xprofile
+
+cd gnome
+chmod +x gnomeinstall.sh
+./gnomeinstall.sh
+echo 'use "dash to dock" to change icon local'
+
+sudo -i
+cd \
+mkdir swap
+cd swap
+dd if=/dev/zero of=swap bs=1024 count="4000000"
+mkswap -f  swap﻿
+echo /swap/swap none swap defaults 0 0 >>/etc/fstab
+
+pacman -Syyu
+
+echo ' 配置xx-net(appid) ,设置代理为[http://127.0.0.1:8086/proxy.pac] kepade12@gmail.com'
+echo '配置github(kepade12@gmail.com)  ftp&&ssh 的用户和读写权限 '
+
+
+
+#end

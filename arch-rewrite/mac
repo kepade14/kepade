@@ -1,0 +1,5 @@
+#!/bin/sh
+
+ifconfig enp1s0 down
+macchanger -r enp1s0
+ifconfig enp1s0 up

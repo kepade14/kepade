@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -x
+systemctl start httpd.service
+systemctl start mysqld.service
+systemctl start sshd.service
+systemctl start vsftpd.service
+systemctl start tor.service
+set +x
+echo '21 22 80 3306   open!!!'
+
