@@ -85,7 +85,7 @@ cp -rf group- /etc
 grub-mkconfig -o /boot/grub/grub.cfg
 
 ##can choice
-pacman -S  netease-cloud-music visual-studio-code shadowsocks-qt5 rkhunter nmap hping telegram-desktop
+pacman -S  netease-cloud-music visual-studio-code shadowsocks-qt5 rkhunter nmap hping telegram-desktop wine
   
 grub-mkconfig -o /boot/grub/grub.cfg
 
