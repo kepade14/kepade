@@ -1,0 +1,740 @@
+➜  ~ strace pacaur -Syu      
+execve("/usr/bin/pacaur", ["pacaur", "-Syu"], 0x7ffe4064c7d8 /* 51 vars */) = 0
+brk(NULL)                               = 0x2152000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=163722, ...}) = 0
+mmap(NULL, 163722, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f651b0a7000
+close(3)                                = 0
+open("/usr/lib/libreadline.so.7", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0n\1\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0555, st_size=363064, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f651b0a5000
+mmap(NULL, 2413768, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f651ac5e000
+mprotect(0x7f651aca2000, 2097152, PROT_NONE) = 0
+mmap(0x7f651aea2000, 32768, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x44000) = 0x7f651aea2000
+mmap(0x7f651aeaa000, 5320, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f651aeaa000
+close(3)                                = 0
+open("/usr/lib/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`\r\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=14296, ...}) = 0
+mmap(NULL, 2109584, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f651aa5a000
+mprotect(0x7f651aa5d000, 2093056, PROT_NONE) = 0
+mmap(0x7f651ac5c000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f651ac5c000
+close(3)                                = 0
+open("/usr/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\340\5\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1985472, ...}) = 0
+mmap(NULL, 3823824, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f651a6b4000
+mprotect(0x7f651a851000, 2093056, PROT_NONE) = 0
+mmap(0x7f651aa50000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19c000) = 0x7f651aa50000
+mmap(0x7f651aa56000, 14544, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f651aa56000
+close(3)                                = 0
+open("/usr/lib/libncursesw.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0|\1\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=444776, ...}) = 0
+mmap(NULL, 2542488, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f651a447000
+mprotect(0x7f651a4af000, 2093056, PROT_NONE) = 0
+mmap(0x7f651a6ae000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x67000) = 0x7f651a6ae000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f651b0a3000
+arch_prctl(ARCH_SET_FS, 0x7f651b0a3b40) = 0
+mprotect(0x7f651aa50000, 16384, PROT_READ) = 0
+mprotect(0x7f651a6ae000, 16384, PROT_READ) = 0
+mprotect(0x7f651ac5c000, 4096, PROT_READ) = 0
+mprotect(0x7f651aea2000, 8192, PROT_READ) = 0
+mprotect(0x6c5000, 4096, PROT_READ)     = 0
+mprotect(0x7f651b0cf000, 4096, PROT_READ) = 0
+munmap(0x7f651b0a7000, 163722)          = 0
+open("/dev/tty", O_RDWR|O_NONBLOCK)     = 3
+close(3)                                = 0
+brk(NULL)                               = 0x2152000
+brk(0x2173000)                          = 0x2173000
+open("/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=3447664, ...}) = 0
+mmap(NULL, 3447664, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f651a0fd000
+close(3)                                = 0
+getuid()                                = 1000
+getgid()                                = 100
+geteuid()                               = 1000
+getegid()                               = 100
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+ioctl(-1, TIOCGPGRP, 0x7ffc778b7d04)    = -1 EBADF (Bad file descriptor)
+sysinfo({uptime=31152, loads=[55872, 71328, 67616], totalram=4001775616, freeram=693747712, sharedram=187691008, bufferram=171053056, totalswap=4095995904, freeswap=4095995904, procs=513, totalhigh=0, freehigh=0, mem_unit=1}) = 0
+rt_sigaction(SIGCHLD, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigaction(SIGTSTP, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTSTP, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigaction(SIGTTIN, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTTIN, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigaction(SIGTTOU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTTOU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+uname({sysname="Linux", nodename="kepade16", ...}) = 0
+stat("/home/gmx-x", {st_mode=S_IFDIR|0700, st_size=4096, ...}) = 0
+stat(".", {st_mode=S_IFDIR|0700, st_size=4096, ...}) = 0
+stat("/home", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/home/gmx-x", {st_mode=S_IFDIR|0700, st_size=4096, ...}) = 0
+stat("/home/gmx-x", {st_mode=S_IFDIR|0700, st_size=4096, ...}) = 0
+getpid()                                = 10104
+open("/usr/lib/gconv/gconv-modules.cache", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/lib/gconv/gconv-modules", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=56095, ...}) = 0
+read(3, "# GNU libc iconv configuration.\n"..., 4096) = 4096
+read(3, "1002//\tJUS_I.B1.002//\nmodule\tJUS"..., 4096) = 4096
+read(3, "ISO-IR-110//\t\tISO-8859-4//\nalias"..., 4096) = 4096
+read(3, "\t\tISO-8859-14//\nalias\tISO_8859-1"..., 4096) = 4096
+read(3, "IC-ES//\nalias\tEBCDICES//\t\tEBCDIC"..., 4096) = 4096
+read(3, "DIC-CP-ES//\t\tIBM284//\nalias\tCSIB"..., 4096) = 4096
+read(3, "//\nalias\tCSIBM864//\t\tIBM864//\nal"..., 4096) = 4096
+read(3, "BM939//\nmodule\tIBM939//\t\tINTERNA"..., 4096) = 4096
+read(3, "EUC-CN//\nalias\tCN-GB//\t\t\tEUC-CN/"..., 4096) = 4096
+read(3, "T//\nmodule\tISO-2022-CN-EXT//\tINT"..., 4096) = 4096
+brk(0x2194000)                          = 0x2194000
+read(3, "//\t\tISO_5428//\nalias\tISO_5428:19"..., 4096) = 4096
+read(3, "CII-8\t1\n\n#\tfrom\t\t\tto\t\t\tmodule\t\tc"..., 4096) = 4096
+read(3, "\tfrom\t\t\tto\t\t\tmodule\t\tcost\nalias\t"..., 4096) = 4096
+read(3, "712//\t\tINTERNAL\t\tIBM12712\t\t1\nmod"..., 4096) = 2847
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+getppid()                               = 10102
+getpid()                                = 10104
+getpgrp()                               = 10102
+ioctl(2, TIOCGPGRP, [10102])            = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, 8) = 0
+prlimit64(0, RLIMIT_NPROC, NULL, {rlim_cur=15228, rlim_max=15228}) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+open("/usr/bin/pacaur", O_RDONLY)       = 3
+stat("/usr/bin/pacaur", {st_mode=S_IFREG|0755, st_size=98047, ...}) = 0
+ioctl(3, TCGETS, 0x7ffc778b7c90)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+read(3, "#!/bin/bash\n\n#\n# pacaur: an AUR "..., 80) = 80
+lseek(3, 0, SEEK_SET)                   = 0
+prlimit64(0, RLIMIT_NOFILE, NULL, {rlim_cur=1024, rlim_max=4*1024}) = 0
+fcntl(255, F_GETFD)                     = -1 EBADF (Bad file descriptor)
+dup2(3, 255)                            = 255
+close(3)                                = 0
+fcntl(255, F_SETFD, FD_CLOEXEC)         = 0
+fcntl(255, F_GETFL)                     = 0x8000 (flags O_RDONLY|O_LARGEFILE)
+fstat(255, {st_mode=S_IFREG|0755, st_size=98047, ...}) = 0
+lseek(255, 0, SEEK_CUR)                 = 0
+read(255, "#!/bin/bash\n\n#\n# pacaur: an AUR "..., 8192) = 8192
+faccessat(AT_FDCWD, "", R_OK)           = -1 ENOENT (No such file or directory)
+open("/etc/makepkg.conf", O_RDONLY)     = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=5922, ...}) = 0
+read(3, "#\n# /etc/makepkg.conf\n#\n\n#######"..., 5922) = 5922
+close(3)                                = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+open("opt/", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("opt/", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("opt/", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("opt/", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open(".", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFDIR|0700, st_size=4096, ...}) = 0
+getdents(3, /* 53 entries */, 32768)    = 1728
+getdents(3, /* 0 entries */, 32768)     = 0
+close(3)                                = 0
+faccessat(AT_FDCWD, "/home/gmx-x/.config/pacman/makepkg.conf", R_OK) = -1 ENOENT (No such file or directory)
+faccessat(AT_FDCWD, "/home/gmx-x/.makepkg.conf", R_OK) = -1 ENOENT (No such file or directory)
+open("/etc/xdg/pacaur/config", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=884, ...}) = 0
+read(3, "#!/bin/bash\n\n#\n# /etc/xdg/pacaur"..., 884) = 884
+close(3)                                = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+faccessat(AT_FDCWD, "/home/gmx-x/.config/pacaur/config", R_OK) = -1 ENOENT (No such file or directory)
+stat("/home/gmx-x/.cache/pacaur", {st_mode=S_IFDIR|0700, st_size=4096, ...}) = 0
+open("/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=2997, ...}) = 0
+read(3, "# Locale name alias data base.\n#"..., 4096) = 2997
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+open("/usr/share/locale/zh_CN.UTF-8/LC_MESSAGES/pacaur.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/zh_CN.utf8/LC_MESSAGES/pacaur.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/zh_CN/LC_MESSAGES/pacaur.mo", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=15961, ...}) = 0
+mmap(NULL, 15961, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f651b0cb000
+close(3)                                = 0
+brk(0x21b5000)                          = 0x21b5000
+open("/usr/share/locale/zh.UTF-8/LC_MESSAGES/pacaur.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/zh/LC_MESSAGES/pacaur.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+read(255, "            continue\n           "..., 8192) = 8192
+read(255, "pspkgs[@]} | sort -u))\n    else\n"..., 8192) = 8192
+brk(0x21d6000)                          = 0x21d6000
+read(255, "on default provider is already i"..., 8192) = 8192
+brk(0x21f7000)                          = 0x21f7000
+read(255, "Aprovides[@]}\"; do\n        Aprov"..., 8192) = 8192
+brk(0x2218000)                          = 0x2218000
+read(255, "\nOutofdateChecks() {\n    local i"..., 8192) = 8192
+read(255, "    if [[ -n \"${installscripts[@"..., 8192) = 8192
+brk(0x2239000)                          = 0x2239000
+read(255, "sAver\" || depsAver=\"$(GetJson \"v"..., 8192) = 8192
+brk(0x225a000)                          = 0x225a000
+read(255, "ubmitted modified\n        printf"..., 8192) = 8192
+brk(0x227b000)                          = 0x227b000
+read(255, "=~ \" $clone \" ]] && rm -rf \"$clo"..., 8192) = 8192
+brk(0x229c000)                          = 0x229c000
+rt_sigprocmask(SIG_BLOCK, [INT], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+read(255, " download AUR dependencies\"\n    "..., 8192) = 8192
+brk(0x22bd000)                          = 0x22bd000
+read(255, "ift $OPTIND\n    OPTIND=1\ndone\n\n#"..., 8192) = 7935
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+pipe([3, 4])                            = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [INT CHLD], [], 8) = 0
+lseek(255, -7134, SEEK_CUR)             = 90913
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f651b0a3e10) = 10105
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, 8) = 0
+close(4)                                = 0
+read(3, "", 128)                        = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 1}], 0, NULL) = 10105
+rt_sigaction(SIGINT, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=10105, si_uid=1000, si_status=1, si_utime=0, si_stime=0} ---
+wait4(-1, 0x7ffc778b6dd0, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[]})                 = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+pipe([3, 4])                            = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [INT CHLD], [], 8) = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f651b0a3e10) = 10106
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, 8) = 0
+close(4)                                = 0
+read(3, "", 128)                        = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 1}], 0, NULL) = 10106
+rt_sigaction(SIGINT, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=10106, si_uid=1000, si_status=1, si_utime=0, si_stime=0} ---
+wait4(-1, 0x7ffc778b6cd0, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[]})                 = 0
+read(255, "\n# sanity check\npacmanarg=(${pac"..., 8192) = 7134
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+pipe([3, 4])                            = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [INT CHLD], [], 8) = 0
+lseek(255, -6603, SEEK_CUR)             = 91444
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f651b0a3e10) = 10107
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, 8) = 0
+close(4)                                = 0
+read(3, "/usr/bin/vi\n", 128)           = 12
+read(3, "", 128)                        = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=10107, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], WNOHANG, NULL) = 10107
+wait4(-1, 0x7ffc778b7050, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[]})                 = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+read(255, "[[ \"$PACMAN\" = $(basename \"$0\") "..., 8192) = 6603
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+pipe([3, 4])                            = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [INT CHLD], [], 8) = 0
+lseek(255, -6483, SEEK_CUR)             = 91564
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f651b0a3e10) = 10108
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, 8) = 0
+close(4)                                = 0
+read(3, "pacaur\n", 128)                = 7
+read(3, "", 128)                        = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=10108, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], WNOHANG, NULL) = 10108
+wait4(-1, 0x7ffc778b7050, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[]})                 = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+read(255, "[[ ! -w \"$clonedir\" ]] && Note \""..., 8192) = 6483
+faccessat(AT_FDCWD, "/home/gmx-x/.cache/pacaur", W_OK) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+pipe([3, 4])                            = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [INT CHLD], [], 8) = 0
+lseek(255, -6015, SEEK_CUR)             = 92032
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f651b0a3e10) = 10109
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, 8) = 0
+close(4)                                = 0
+read(3, "", 128)                        = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=10109, si_uid=1000, si_status=1, si_utime=0, si_stime=0} ---
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 1}], WNOHANG, NULL) = 10109
+wait4(-1, 0x7ffc778b6ed0, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[]})                 = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+read(255, "[[ $repo && $aur ]] && Note \"e\" "..., 8192) = 6015
+stat(".", {st_mode=S_IFDIR|0700, st_size=4096, ...}) = 0
+stat("/usr/local/sbin/sudo", 0x7ffc778b6b80) = -1 ENOENT (No such file or directory)
+stat("/usr/local/bin/sudo", 0x7ffc778b6b80) = -1 ENOENT (No such file or directory)
+stat("/usr/bin/sudo", {st_mode=S_IFREG|S_ISUID|0755, st_size=134384, ...}) = 0
+stat("/usr/bin/sudo", {st_mode=S_IFREG|S_ISUID|0755, st_size=134384, ...}) = 0
+geteuid()                               = 1000
+getegid()                               = 100
+getuid()                                = 1000
+getgid()                                = 100
+access("/usr/bin/sudo", X_OK)           = 0
+stat("/usr/bin/sudo", {st_mode=S_IFREG|S_ISUID|0755, st_size=134384, ...}) = 0
+geteuid()                               = 1000
+getegid()                               = 100
+getuid()                                = 1000
+getgid()                                = 100
+access("/usr/bin/sudo", R_OK)           = 0
+stat("/usr/bin/sudo", {st_mode=S_IFREG|S_ISUID|0755, st_size=134384, ...}) = 0
+stat("/usr/bin/sudo", {st_mode=S_IFREG|S_ISUID|0755, st_size=134384, ...}) = 0
+geteuid()                               = 1000
+getegid()                               = 100
+getuid()                                = 1000
+getgid()                                = 100
+access("/usr/bin/sudo", X_OK)           = 0
+stat("/usr/bin/sudo", {st_mode=S_IFREG|S_ISUID|0755, st_size=134384, ...}) = 0
+geteuid()                               = 1000
+getegid()                               = 100
+getuid()                                = 1000
+getgid()                                = 100
+access("/usr/bin/sudo", R_OK)           = 0
+rt_sigprocmask(SIG_BLOCK, [INT CHLD], [], 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [INT CHLD], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [INT CHLD], NULL, 8) = 0
+lseek(255, -24, SEEK_CUR)               = 98023
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f651b0a3e10) = 10111
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+wait4(-1, [sudo] gmx-x 的密码：
+:: 正在同步软件包数据库...
+ core 已经是最新版本
+ extra 已经是最新版本
+ community 已经是最新版本
+ multilib 已经是最新版本
+ archlinuxcn 已经是最新版本
+ blackarch 已经是最新版本
+:: 正在进行全面系统更新...
+今日无事可做
+[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 10111
+rt_sigaction(SIGINT, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=10111, si_uid=0, si_status=0, si_utime=3, si_stime=0} ---
+wait4(-1, 0x7ffc778b65d0, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[]})                 = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+pipe([3, 4])                            = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [INT CHLD], [], 8) = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f651b0a3e10) = 10135
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, 8) = 0
+close(4)                                = 0
+read(3, " shadowsocks-qt5\n", 128)      = 17
+read(3, "", 128)                        = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=10135, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], WNOHANG, NULL) = 10135
+wait4(-1, 0x7ffc778b5090, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[]})                 = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+stat("/home/gmx-x/.config/cower/config", 0x7ffc778b5cb0) = -1 ENOENT (No such file or directory)
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+pipe([3, 4])                            = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [INT CHLD], [], 8) = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f651b0a3e10) = 10139
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, 8) = 0
+close(4)                                = 0
+read(3, "", 128)                        = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=10139, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], WNOHANG, NULL) = 10139
+wait4(-1, 0x7ffc778b51d0, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[]})                 = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 0), ...}) = 0
+write(1, ":: \346\255\243\345\234\250\345\274\200\345\247\213 AUR \345\215\207\347\272\247...\n", 30:: 正在开始 AUR 升级...
+) = 30
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+pipe([3, 4])                            = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [INT CHLD], [], 8) = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f651b0a3e10) = 10143
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, 8) = 0
+close(4)                                = 0
+read(3, "gnome-shell-extension-easyscreen"..., 128) = 43
+read(3, "", 128)                        = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=10143, si_uid=1000, si_status=0, si_utime=23, si_stime=1} ---
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], WNOHANG, NULL) = 10143
+wait4(-1, 0x7ffc778b4650, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[]})                 = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+pipe([3, 4])                            = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [INT CHLD], [], 8) = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f651b0a3e10) = 10162
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, 8) = 0
+close(4)                                = 0
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 0x7ffc778b47a0, 128)            = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+read(3, 
+
+"{\"version\":5,\"type\":\"multiinfo\","..., 128) = 128
+read(3, "seID\":96760,\"PackageBase\":\"gnome"..., 128) = 128
+read(3, " pop-down interface to configure"..., 128) = 128
+read(3, "yScreenCast\",\"NumVotes\":7,\"Popul"..., 128) = 128
+read(3, "Modified\":1492898141,\"URLPath\":\""..., 128) = 128
+read(3, "],\"Conflicts\":[\"gnome-shell-exte"..., 128) = 128
+read(3, "\"PackageBase\":\"zhcon\",\"Version\":"..., 128) = 128
+read(3, "Votes\":17,\"Popularity\":0.856466,"..., 128) = 128
+read(3, "URLPath\":\"\\/cgit\\/aur.git\\/snaps"..., 128) = 128
+read(3, "ywords\":[]}]}", 128)          = 13
+read(3, "", 128)                        = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=10162, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], WNOHANG, NULL) = 10162
+wait4(-1, 0x7ffc778b4010, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[]})                 = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+pipe([3, 4])                            = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [INT CHLD], [], 8) = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f651b0a3e10) = 10170
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, 8) = 0
+close(4)                                = 0
+read(3, "gnome-shell-extension-easyscreen"..., 128) = 43
+read(3, "", 128)                        = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=10170, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], WNOHANG, NULL) = 10170
+wait4(-1, 0x7ffc778b4790, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[]})                 = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+pipe([3, 4])                            = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [INT CHLD], [], 8) = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f651b0a3e10) = 10177
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, 8) = 0
+close(4)                                = 0
+read(3, "0.10-1\n0.2.6-9\n", 128)       = 15
+read(3, "", 128)                        = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=10177, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], WNOHANG, NULL) = 10177
+wait4(-1, 0x7ffc778b4890, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[]})                 = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+pipe([3, 4])                            = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [INT CHLD], [], 8) = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f651b0a3e10) = 10184
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, 8) = 0
+close(4)                                = 0
+read(3, "0.10-1\n0.2.6-9\n", 128)       = 15
+read(3, "", 128)                        = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=10184, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], WNOHANG, NULL) = 10184
+wait4(-1, 0x7ffc778b4990, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[]})                 = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+pipe([3, 4])                            = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [INT CHLD], [], 8) = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f651b0a3e10) = 10185
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, 8) = 0
+close(4)                                = 0
+read(3, "0\n", 128)                     = 2
+read(3, "", 128)                        = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=10185, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], WNOHANG, NULL) = 10185
+wait4(-1, 0x7ffc778b4bd0, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[]})                 = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+pipe([3, 4])                            = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [INT CHLD], [], 8) = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f651b0a3e10) = 10186
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, 8) = 0
+close(4)                                = 0
+read(3, "0\n", 128)                     = 2
+read(3, "", 128)                        = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=10186, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], WNOHANG, NULL) = 10186
+wait4(-1, 0x7ffc778b4bd0, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[]})                 = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+pipe([3, 4])                            = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [INT CHLD], [], 8) = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f651b0a3e10) = 10187
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, 8) = 0
+close(4)                                = 0
+read(3, "", 128)                        = 0
+close(3)                                = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=10187, si_uid=1000, si_status=1, si_utime=0, si_stime=0} ---
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 1}], WNOHANG, NULL) = 10187
+wait4(-1, 0x7ffc778b4dd0, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[]})                 = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+pipe([3, 4])                            = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [INT CHLD], [], 8) = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f651b0a3e10) = 10190
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, {sa_handler=0x443a00, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f651a6e7940}, 8) = 0
+close(4)                                = 0
+read(3, "\n", 128)                      = 1
+read(3, "", 128)                        = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=10190, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], WNOHANG, NULL) = 10190
+wait4(-1, 0x7ffc778b50d0, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[]})                 = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x459530, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, {sa_handler=0x4404c0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f651a6e7940}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+write(1, " \344\273\212\346\227\245\346\227\240\344\272\213\345\217\257\345\201\232\n", 20 今日无事可做
+) = 20
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+exit_group(0)                           = ?
++++ exited with 0 +++
+➜  ~ 
+➜  ~ 
+➜  ~ 
