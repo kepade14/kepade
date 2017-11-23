@@ -1,0 +1,11 @@
+#!/bin/bash
+###GFW
+echo ' this script is to pass the GTW '
+set -x
+cd 下载
+cd XX-Net-master
+ls
+./start
+#end
+#i know where you live in packages
+#t

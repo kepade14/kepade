@@ -1,4 +1,4 @@
-#!/bin/sh                  
+#!/bin/sh
 
 ###for my Arch-linux
 #this script must running under internet and root
@@ -16,7 +16,7 @@ loadkeys layout
 ping -c 4 baidu.com
 timedatectl set-ntp true
 fdisk -l
-cfdisk ##delete sda6 and rewrite 
+cfdisk ##delete sda6 and rewrite
 mkfs.ext4 /dev/sda6
 mount /dev/sda6 /mnt
 mkdir /mnt/boot
@@ -35,7 +35,7 @@ echo LANG=en_US.UTF-8 >/etc/locale.conf
 echo kepade16 >/etc/hostname
 passwd
 systemctl enable dhcpcd.service
-pacman -S 'xorg' 'gnome' xorg-xinit 
+pacman -S 'xorg' 'gnome' xorg-xinit
 systemctl enable gdm
 systemctl enable NetworkManager.service
 useradd -m -g users -G wheel -s /bin/bash gmx-x
@@ -48,7 +48,7 @@ pacman -S iw wpa_supplicant dialog grub os-prober efibootmgr
 grub-install --recheck /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
-pacman -S wqy-zenhei dnscrypt-proxy ntp  alsa-utils lib32-mesa-vdpau mesa-vdpau xf86-video-ati mesa xf86-video-intel net-tools htop openssl gst-libav libva-intel-driver vsftpd openssh
+pacman -S wqy-zenhei dnscrypt-proxy ntp  alsa-utils lib32-mesa-vdpau mesa-vdpau xf86-video-ati mesa xf86-video-intel net-tools htop openssl gst-libav libva-intel-driver vsftpd openssh intel-ucode
 reboot
 
 
@@ -68,8 +68,9 @@ Server = https://mirrors.ustc.edu.cn/blackarch/$repo/os/$arch
 pacman -Syy
 pacman -S archlinuxcn-keyring
 pacman -S blackarch-keyring
-pacman -S  wget yaourt pacaur wps-office brasero cmus  when etherape lolcat aria2 git vim  google-chrome  virtualbox zsh oh-my-zsh-git xfce4-terminal tor neofetch screenfetch  tmux firefox firefox-i18n-zh-cn macchanger vlc gnome-tweak-tool  gedit python-pyopenssl python2-pyopenssl libffi pygtk python2-notify nss  dconf-editor ntfs-3g dosfstools gnome-shell-extension-dash-to-dock-git  gnome-shell-extension-easyscreencast
+pacman -S  wget yaourt pacaur wps-office brasero cmus  when etherape lolcat aria2 git vim  google-chrome  virtualbox zsh oh-my-zsh-git xfce4-terminal tor neofetch screenfetch  tmux firefox firefox-i18n-zh-cn macchanger vlc gnome-tweak-tool  gedit python-pyopenssl python2-pyopenssl libffi pygtk python2-notify nss  dconf-editor ntfs-3g dosfstools gnome-shell-extension-dash-to-dock-git  gnome-shell-extension-easyscreencast strace bind-tools    gnome-shell-extension-simple-net-speed-git  gnome-shell-extension-topicons-plus-git reflector rsync wipe adobe-source-code-pro-fonts
 
+#create swap
 cd \
 mkdir swap
 cd swap
@@ -85,16 +86,16 @@ cp -rf group- /etc
 grub-mkconfig -o /boot/grub/grub.cfg
 
 ##can choice
-pacman -S  netease-cloud-music visual-studio-code shadowsocks-qt5 rkhunter nmap hping telegram-desktop wine
-  
+#lib32
+pacman -S  atom proxychains netease-cloud-music visual-studio-code shadowsocks-qt5 rkhunter nmap hping telegram-desktop wine  lib32-freetype2 lib32-libxinerama lib32-libxcursor lib32-libxrandr lib32-libxrender lib32-libxi lib32-libxext  lib32-libxfixes lib32-libsm lib32-fontconfig lib32-libpng   lib32-libgpg-error   lib32-libgcrypt  lib32-xz  lib32-attr   lib32-libcap  lib32-systemd   lib32-dbus  lib32-pcre   lib32-util-linux  lib32-glib2 lib32-harfbuzz
 grub-mkconfig -o /boot/grub/grub.cfg
 
 #######this step is to install some software and also will take some time
 echo 'https://forum.manjaro.org/t/install-apache-mariadb-php-lamp-2016/1243/8'
 cd /srv
-ls 
+ls
 cd
-cp -rf http/ /srv/ 
+cp -rf http/ /srv/
 
 cp -rf sshd_config /etc/ssh/sshd_config
 cp -rf vsftpd.conf /etc/vsftpd.conf
@@ -102,18 +103,18 @@ cd
 
 ##start this without root but sudo
 cp -rf bashrc xx cn xinitrc xprofile /home/gmx-x/
-chmod +x xx cn 
+chmod +x xx cn
 mv cn .cn&& mv xx .xx && mv bashrc .bashrc &&mv xinitrc .xinitrc && mv xprofile .xprofile
 
 cd gnome
 chmod +x gnomeinstall.sh
 ./gnomeinstall.sh
 echo 'use "dash to dock" to change icon local'
-
+reflector --latest 200 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
 pacman -Syyu
 
-echo ' 配置xx-net() ,设置代理为[http://127.0.0.1:8086/proxy.pac] kepade12@gmail.com'
+echo '配置xx-net( kepade-149711|ringed-hallway-149711|poetic-bison-168205|rapid-pottery-168205 ) ,设置代理为[http://127.0.0.1:8086/proxy.pac] kepade12@gmail.com'
 echo '配置github(kepade12@gmail.com)  ftp&&ssh 的用户和读写权限 '
 
 

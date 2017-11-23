@@ -11,8 +11,8 @@ if [ $(id -u) != "0" ]; then
     exit 1
 fi
 ###START
-
-loadkeys layout
+set -eu
+loadkeys us
 ping -c 4 baidu.com
 timedatectl set-ntp true
 fdisk -l
@@ -68,8 +68,11 @@ Server = https://mirrors.ustc.edu.cn/blackarch/$repo/os/$arch
 pacman -Syy
 pacman -S archlinuxcn-keyring
 pacman -S blackarch-keyring
-pacman -S  wget yaourt pacaur wps-office brasero cmus  when etherape lolcat aria2 git vim  google-chrome  virtualbox zsh oh-my-zsh-git xfce4-terminal tor neofetch screenfetch  tmux firefox firefox-i18n-zh-cn macchanger vlc gnome-tweak-tool  gedit python-pyopenssl python2-pyopenssl libffi pygtk python2-notify nss  dconf-editor ntfs-3g dosfstools gnome-shell-extension-dash-to-dock-git  gnome-shell-extension-easyscreencast strace bind-tools    gnome-shell-extension-simple-net-speed-git  gnome-shell-extension-topicons-plus-git reflector rsync wipe adobe-source-code-pro-fonts
+pacman -S  wget yaourt pacaur wps-office brasero cmus  when etherape lolcat aria2 git vim  google-chrome  virtualbox zsh oh-my-zsh-git xfce4-terminal tor neofetch screenfetch  tmux macchanger vlc gnome-tweak-tool  gedit python-pyopenssl python2-pyopenssl libffi pygtk python2-notify nss  dconf-editor ntfs-3g dosfstools gnome-shell-extension-dash-to-dock-git  gnome-shell-extension-easyscreencast strace bind-tools    gnome-shell-extension-simple-net-speed-git  gnome-shell-extension-topicons-plus-git reflector rsync wipe adobe-source-code-pro-fonts gnome-shell-extension-workspaces-to-dock-git
 
+cd gnome
+chmod +x gnomeinstall.sh
+./gnomeinstall.sh
 #create swap
 cd \
 mkdir swap
@@ -87,7 +90,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 ##can choice
 #lib32
-pacman -S  atom proxychains netease-cloud-music visual-studio-code shadowsocks-qt5 rkhunter nmap hping telegram-desktop wine  lib32-freetype2 lib32-libxinerama lib32-libxcursor lib32-libxrandr lib32-libxrender lib32-libxi lib32-libxext  lib32-libxfixes lib32-libsm lib32-fontconfig lib32-libpng   lib32-libgpg-error   lib32-libgcrypt  lib32-xz  lib32-attr   lib32-libcap  lib32-systemd   lib32-dbus  lib32-pcre   lib32-util-linux  lib32-glib2 lib32-harfbuzz
+pacman -S  firefox firefox-i18n-zh-cn atom proxychains netease-cloud-music visual-studio-code shadowsocks-qt5 rkhunter nmap hping telegram-desktop wine  lib32-freetype2 lib32-libxinerama lib32-libxcursor lib32-libxrandr lib32-libxrender lib32-libxi lib32-libxext  lib32-libxfixes lib32-libsm lib32-fontconfig lib32-libpng   lib32-libgpg-error   lib32-libgcrypt  lib32-xz  lib32-attr   lib32-libcap  lib32-systemd   lib32-dbus  lib32-pcre   lib32-util-linux  lib32-glib2 lib32-harfbuzz
 grub-mkconfig -o /boot/grub/grub.cfg
 
 #######this step is to install some software and also will take some time
@@ -106,9 +109,6 @@ cp -rf bashrc xx cn xinitrc xprofile /home/gmx-x/
 chmod +x xx cn
 mv cn .cn&& mv xx .xx && mv bashrc .bashrc &&mv xinitrc .xinitrc && mv xprofile .xprofile
 
-cd gnome
-chmod +x gnomeinstall.sh
-./gnomeinstall.sh
 echo 'use "dash to dock" to change icon local'
 reflector --latest 200 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
