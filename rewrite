@@ -6,12 +6,16 @@
 #for kepade#gmx-x
 -----------------------------------------------
 
+
 if [ $(id -u) != "0" ]; then
     echo "Error: You must be root to run this script, please use root "
     exit 1
+    else
+       rewrite
 fi
 ###START
 
+rewrite(){
 loadkeys us
 ping -c 4 baidu.com
 timedatectl set-ntp true
@@ -67,8 +71,11 @@ Server = https://mirrors.ustc.edu.cn/blackarch/$repo/os/$arch
 pacman -Syy
 pacman -S archlinuxcn-keyring
 pacman -S blackarch-keyring
-pacman -S  wqy-zenhei ttf-dejavu wget yaourt p7zip alacarte pacaur python-pip python2-pip hostapd dnsmasq mplayer  wps-office brasero cmus  wireshark-gtk   lolcat aria2 git vim  google-chrome-dev  virtualbox zsh oh-my-zsh-git xfce4-terminal tor neofetch screenfetch  tmux  macchanger vlc gnome-tweak-tool  gedit python-pyopenssl python2-pyopenssl libffi pygtk python2-notify nss  dconf-editor ntfs-3g dosfstools gnome-shell-extension-dash-to-dock-git  gnome-shell-extension-easyscreencast strace bind-tools    gnome-shell-extension-simple-net-speed-git  gnome-shell-extension-topicons-plus-git reflector rsync wipe adobe-source-code-pro-fonts gnome-shell-extension-coverflow-alt-tab-git shadowsocks-libev simple-obfs
+pacman -Syy
+pacman -S  ufw wqy-zenhei ttf-dejavu wget yaourt file-roller unrar p7zip alacarte pacaur python-pip python2-pip hostapd dnsmasq mplayer  wps-office brasero cmus  wireshark-gtk   lolcat aria2 git vim  google-chrome-dev  virtualbox zsh oh-my-zsh-git xfce4-terminal tor neofetch screenfetch  tmux  macchanger vlc gnome-tweak-tool  gedit python-pyopenssl python2-pyopenssl libffi pygtk python2-notify nss  dconf-editor ntfs-3g dosfstools gnome-shell-extension-dash-to-dock-git  gnome-shell-extension-easyscreencast strace bind-tools    gnome-shell-extension-simple-net-speed-git  gnome-shell-extension-topicons-plus-git reflector rsync wipe adobe-source-code-pro-fonts gnome-shell-extension-coverflow-alt-tab-git shadowsocks-libev simple-obfs
 
+
+software
 #create swap
 cd \
 mkdir swap
@@ -83,7 +90,8 @@ cp -rf environment /etc
 cp -rf group /etc
 cp -rf group- /etc
 grub-mkconfig -o /boot/grub/grub.cfg
-
+sudo systemctl start ufw
+sudo systemctl enable ufw
 ##can choice
 #lib32
 pacman -S  atom  proxychains  netease-cloud-music visual-studio-code  rkhunter nmap hping telegram-desktop wine  lib32-freetype2 lib32-libxinerama lib32-libxcursor lib32-libxrandr lib32-libxrender lib32-libxi lib32-libxext  lib32-libxfixes lib32-libsm lib32-fontconfig lib32-libpng   lib32-libgpg-error   lib32-libgcrypt  lib32-xz  lib32-attr   lib32-libcap  lib32-systemd   lib32-dbus  lib32-pcre   lib32-util-linux  lib32-glib2 lib32-harfbuzz
@@ -112,6 +120,7 @@ pacman -Syyu
 
 echo '配置xx-net( kepade-149711|ringed-hallway-149711|poetic-bison-168205|rapid-pottery-168205 ) ,设置代理为[http://127.0.0.1:8086/proxy.pac] kepade12@gmail.com'
 echo '配置github(kepade12@gmail.com)  ftp&&ssh 的用户和读写权限 '
+}
 
 
 
