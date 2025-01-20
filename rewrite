@@ -18,7 +18,7 @@ fi
 rewrite(){
 loadkeys us
 ping -c 4 baidu.com
-timedatectl set-ntp true
+reflector --latest 200 --protocol https --sort rate --save /etc/pacman.d/mirrorlisttimedatectl set-ntp true
 fdisk -l
 cfdisk ##delete sda6 and rewrite
 mkfs.ext4 /dev/sda6
@@ -51,7 +51,7 @@ echo gmx-x ALL=(ALL)ALL >>/etc/sudoers
 grub-install --recheck /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
-pacman -S i810-dri r8186 dnscrypt-proxy ntp  alsa-utils lib32-mesa-vdpau mesa-vdpau xf86-video-ati mesa xf86-video-intel net-tools htop openssl gst-libav libva-intel-driver vsftpd openssh intel-ucode
+pacman -S   ntp  alsa-utils  net-tools htop  vsftpd openssh intel-ucode
 reboot
 
 
@@ -63,7 +63,7 @@ Include = /etc/pacman.d/mirrorlist
 [archlinuxcn]
 SigLevel = Optional TrustedOnly
 Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
-
+#不安装（存在代理问题）
 [blackarch]
 SigLevel = Optional TrustAll
 Server = https://mirrors.ustc.edu.cn/blackarch/$repo/os/$arch
@@ -72,7 +72,7 @@ pacman -Syy
 pacman -S archlinuxcn-keyring
 pacman -S blackarch-keyring
 pacman -Syy
-pacman -S  ufw wqy-zenhei ttf-dejavu wget yaourt file-roller unrar p7zip alacarte pacaur python-pip python2-pip hostapd dnsmasq mplayer  wps-office brasero cmus  wireshark-gtk   lolcat aria2 git vim  google-chrome-dev  virtualbox zsh oh-my-zsh-git xfce4-terminal tor neofetch screenfetch  tmux  macchanger vlc gnome-tweak-tool  gedit python-pyopenssl python2-pyopenssl libffi pygtk python2-notify nss  dconf-editor ntfs-3g dosfstools gnome-shell-extension-dash-to-dock-git  gnome-shell-extension-easyscreencast strace bind-tools    gnome-shell-extension-simple-net-speed-git  gnome-shell-extension-topicons-plus-git reflector rsync wipe adobe-source-code-pro-fonts gnome-shell-extension-coverflow-alt-tab-git shadowsocks-libev simple-obfs
+pacman -S  ufw wqy-zenhei  wget yay file-roller unrar p7zip alacarte pacaur  hostapd dnsmasq  brasero cmus    lolcat aria2 git vim   virtualbox zsh oh-my-zsh-git xfce4-terminal tor neofetch screenfetch  tmux  macchanger vlc gnome-tweak-tool  gedit python-pyopenssl python2-pyopenssl libffi pygtk python2-notify nss  dconf-editor ntfs-3g dosfstools gnome-shell-extension-dash-to-dock-git  gnome-shell-extension-easyscreencast strace bind-tools    gnome-shell-extension-simple-net-speed-git  gnome-shell-extension-topicons-plus-git reflector rsync wipe adobe-source-code-pro-fonts gnome-shell-extension-coverflow-alt-tab-git shadowsocks-libev simple-obfs
 
 
 software
@@ -117,7 +117,7 @@ echo 'use "dash to dock" to change icon local'
 reflector --latest 200 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
 pacman -Syyu
-
+#无用了
 echo '配置xx-net( kepade-149711|ringed-hallway-149711|poetic-bison-168205|rapid-pottery-168205 ) ,设置代理为[http://127.0.0.1:8086/proxy.pac] kepade12@gmail.com'
 echo '配置github(kepade12@gmail.com)  ftp&&ssh 的用户和读写权限 '
 }
